@@ -157,7 +157,6 @@ body {
   background-color: #32602D;
 }
 
-/* Rodapé */
 footer {
   padding: 20px;
   background-color: #32602D;
@@ -165,32 +164,28 @@ footer {
   text-align: center;
 }
 
-footer form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
 
-footer input,
-footer button {
+
+footer a, {
   padding: 10px;
   font-size: 1rem;
 }
 
-footer button {
+#a {
+  display: inline-block;
+  padding: 5px 10px;
   background-color: #ED8D26;
   color: white;
-  border: none;
+  text-decoration: none;
   border-radius: 5px;
-  cursor: pointer;
+  font-weight: bold;
 }
 
-footer button:hover {
+#a:hover {
   background-color: #E56741;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   .texto-foto {
     flex-direction: column;
