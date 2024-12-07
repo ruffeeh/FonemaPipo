@@ -9,16 +9,23 @@
 </head>
 <body>
   <header name="inicio">
-    <nav class="menu">
-      <ul>
-        <li><a href="#inicio" name="inicio">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#equipe">Equipe</a></li>
-        <li><a href="#baixar">Download</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="menu">
+    <div class="menu-hamburguer" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="menu-lista">
+      <li><a href="#inicio" name="inicio">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#equipe">Equipe</a></li>
+      <li><a href="#baixar">Download</a></li>
+      <li><a href="#feedback">Feedback</a></li>   
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
 
   <section class="primeira-sessao">
     <div class="texto-foto">
@@ -26,8 +33,13 @@
         <a name="sobre">Descubra o Fonema Pipo</a>
         <p>O aplicativo Fonema Pipo foi criado para auxiliar no processo de alfabetização de crianças por meio de testes de consciência fonológicas. Nós da equipe Synergy notamos o aumento da necessidade de tecnologias nessa área após a pandemia e, com isso, desenvolvemos o Fonema Pipo.</p>
       </div>
-      <div class="foto">
-        <img src="img/tela_fonema-pipo_01.jpg" alt="Imagem relacionada ao Fonema Pipo">
+      <div class="foto carrossel">
+        <div class="slides">
+          <img src="img/tela_fonema-pipo_01.jpg" alt="Tela inicial do aplicativo">
+          <img src="img/tela_fonema-pipo_03.jpg" alt="Tela de atividades do aplicativo">
+          <img src="img/tela_fonema-pipo_04.jpg" alt="Tela de relatórios do aplicativo">
+          <img src="img/tela_fonema-pipo_05.jpg" alt="Tela de relatórios do aplicativo">
+        </div>
       </div>
     </div>
   </section>
@@ -71,18 +83,25 @@
     </div>
   </section>
 
+  <section class="sessao-feedback">
+    <h2>Nos envie seu feedback!</h2>
+    <p>Adoraríamos saber sua opinião sobre o Fonema Pipo. Clique no botão abaixo para acessar nosso formulário de satisfação.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe1mZkeVvKBLVCajwZE9GrahxqBAFGxNzsSIYrkIWjk9Tz7Ig/viewform" target="_blank" class="btn-feedback" name="feedback">Dar Feedback</a>
+  </section>
+
   <footer>
     <div class="rodape-contato">
       <a name="contato">Entre em contato:</a><br>
-        <p class="fa fa-envelope" style="font-size:18px;color:white" href="">       gruposynergy3dsem@gmail.com</p>
-        <br><br>
-        <p>© 2024 | Fonema Pipo. Todos os direitos reservados.</p>
+      <p class="fa fa-envelope" style="font-size:18px;color:white">       gruposynergy3dsem@gmail.com</p>
+      <br><br>
+      <p>© 2024 | Fonema Pipo. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <a href="#inicio" class="btn-voltar-topo">
+    <img src="img/setaB.png" alt="Voltar ao topo">
+  </a>
+
+  <script src="script.js"></script>
 </body>
-
-<a href="#inicio" class="btn-voltar-topo">
-  <img src="img/setaB.png" alt="Voltar ao topo">
-</a>
-
 </html>
