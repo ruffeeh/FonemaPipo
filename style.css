@@ -238,3 +238,160 @@ footer a, {
     height: 30px;
   }
 }
+
+/* Carrossel */
+.carrossel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carrossel .slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrossel img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Botão Feedback */
+.sessao-feedback {
+  text-align: center;
+  padding: 20px;
+  background-color: #f3f3f3;
+  margin-top: 20px;
+}
+
+.sessao-feedback h2 {
+  color: #32602D;
+  font-size: 1.5rem;
+}
+
+.sessao-feedback .btn-feedback {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #E56741;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.sessao-feedback .btn-feedback:hover {
+  background-color: #F5B95B;
+}
+
+/* Menu Responsivo */
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+}
+
+.menu-list li {
+  margin: 0 10px;
+}
+
+.menu-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-list {
+    display: none;
+    flex-direction: column;
+    background-color: #ED8D26;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+  }
+
+  .menu-list.active {
+    display: flex;
+  }
+}
+
+/* Estilo do ícone hambúrguer */
+.menu-hamburguer {
+  display: none; /* Somente aparece no modo responsivo */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-hamburguer span {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Ocultando o menu inicialmente */
+.menu-lista {
+  display: flex;
+  list-style: none;
+}
+
+.menu-lista li {
+  margin: 0 15px;
+}
+
+.menu-lista a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Responsivo: hambúrguer visível */
+@media (max-width: 768px) {
+  .menu-hamburguer {
+    display: flex;
+  }
+
+  .menu-lista {
+    display: none; /* Menu oculto por padrão */
+    flex-direction: column;
+    background-color: #ED8D26;
+    position: absolute;
+    top: 50px; /* Ajuste de posição para aparecer abaixo do menu */
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .menu-lista li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  /* Mostrar o menu quando ativo */
+  .menu-lista.ativo {
+    display: flex;
+  }
+}
